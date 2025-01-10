@@ -1,0 +1,152 @@
+/* 
+<Flexbox Option>
+justify-content
+align-items
+flex-direction
+order
+align-self
+flex-wrap
+flex-flow
+align-content
+*/
+
+
+/*
+<내부에서 내부 기준으로 공간이동>
+부모: relative
+자식: absolute
+
+<내부 정중앙>
+시작점 위치: top: 50%; left: 50%;
+보정: transform: translate(-50%, -50%); 
+
+<다른 행 다른 열>
+부모:   flex-direction: column
+자식: align-self: center, flex-end;
+*/
+
+
+.box {
+    color: white;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+  }
+  
+  /*---------------------1번 문제--------------------- 
+  2,3번 박스만 우측 정렬, 사이 공간 존재  */
+  .space-q1 {
+    width: 1000px;
+    height: 800px;
+    border: 1px solid black;
+    position: relative;
+  }
+  
+  .space-q1 .box2 {
+    position: absolute;
+    right: 210px;
+    top: 0;
+  }
+  
+  .space-q1 .box3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  /*---------------------2번 문제--------------------- */
+  .space-q2 {
+    width: 1000px;
+    height: 800px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .space-q2 .box2 {
+    align-self: center;
+  }
+  
+  .space-q2 .box3 {
+    align-self: flex-end;
+  }
+  
+  
+  /*---------------------3번 문제--------------------- */
+  .space-q3 {
+    width: 1000px;
+    height: 800px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .space-q3 .box1 {
+    color: white;
+    background-color: gray;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin-top: 50px;
+  
+  }
+  
+  .space-q3 .box1 .box2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  }
+  
+  
+  /*---------------------4번 문제--------------------- */
+  .space-q4 {
+    width: 1000px;
+    height: 800px;
+    border: 1px solid black;
+    position: relative;
+  }
+  
+  .space-q4 .box2 {
+    color: white;
+    background-color: gray;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+  }
+  
+  
+  
+  
+  /*---------------------5번 문제--------------------- */
+  .space-q5 {
+    width: 1000px;
+    height: 800px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  .space-q5 .box1 {
+    color: white;
+    background-color: gray;
+    width: 700px;
+    height: 300px;
+    position: relative;
+  }
+  
+  .space-q5 .box2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .space-q5 .box3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
